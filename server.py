@@ -46,6 +46,8 @@ def improve_rag(RAG, query):
                 RAG += moreinfo + result["href"]
                 #print(result["href"])
                 #print(moreinfo)
+        if len(RAG) > 128000:
+            RAG = RAG[:128000]
     return RAG
 
 @app.route("/")
@@ -62,7 +64,7 @@ def query_llm():
 
         RAG = data_manager.query_from_index(query)
         RAG = improve_rag(RAG, query)
-        system_prompt = "You are a helpful assistant that answers questions about Drexel University using the latest and most up to date information. Do not hallucinate"
+        system_prompt = "You are a helpful assistant that answers questions about Drexel University using the latest and most up to date information. Assume every question is related to Drexel University. Do not hallucinate."
         user_prompt = f"{RAG}\n\nGiven the above context, accurately answer the following query. Forget everything you knew before and only use the information found in the context to answer the prompt. If you can't answer the prompt with the information provided, say that you're not sure and provide some helpful links to find the information. Think step by step, take a deep breath:\n\n{query}"
         output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown."
         def generate():
@@ -79,7 +81,7 @@ def query_llm():
                     content = chunk.choices[0].delta.content
                     #print(content)  # Print the content for debugging purposes
                     yield content
-        print(f"Response to question {query} has been generated")
+        print(f"Response to question \"{query}\" has been generated")
         return Response(generate(), content_type="text/plain-text")
     
     except Exception as e:

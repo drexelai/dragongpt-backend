@@ -10,6 +10,7 @@ from itertools import islice
 import unicodedata
 import requests
 from duckduckgo_search import DDGS
+from bs4 import BeautifulSoup
 
 # Load environment variables
 load_dotenv("keys.env") #not needed for deployment
@@ -199,16 +200,23 @@ def query_from_index(prompt:str, k=5) -> str:
     metadata_list = [match['metadata'] for match in matches]
     return "\n".join(str(metadata) for metadata in metadata_list)
 
+def is_valid_url(url: str) -> bool:
+    is_http = url.startswith("http")
+    has_invalid_extension = any(file in url.split('.')[-1] for file in ['asp', 'aspx', 'ashx'])
+    is_social_media = any(platform in url for platform in ["reddit", "tiktok", "linkedin", "instagram", "facebook", "twitter", "youtube"])
+    return is_http and not has_invalid_extension and not is_social_media
+
 def fetch_content_from_urls(urls):
     content = ""
     if type(urls) == str:
         urls = [urls]
     for url in urls:
-        if url.startswith("http") and not any(file in url.split('.')[-1] for file in ['asp', 'aspx', 'ashx']) and not "reddit" in url:
+        if is_valid_url(url):
             try:
                 response = requests.get(url)
                 if response.status_code == 200:
-                    content += f"\n{response.text}"
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    content += soup.get_text().replace("\n", "")
             except requests.RequestException as e:
                 #print(f"Error fetching {url}: {e}")
                 continue
