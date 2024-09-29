@@ -64,15 +64,16 @@ def query_llm():
 
         RAG = data_manager.query_from_index(query)
         RAG = improve_rag(RAG, query)
-        system_prompt = "You are a helpful assistant that answers questions about Drexel University using the latest and most up to date information. Assume every question is related to Drexel University. Do not hallucinate."
-        user_prompt = f"{RAG}\n\nGiven the above context, accurately answer the following query. Forget everything you knew before and only use the information found in the context to answer the prompt. If you can't answer the prompt with the information provided, say that you're not sure and provide some helpful links to find the information. Think step by step, take a deep breath:\n\n{query}"
-        output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown."
+        system_prompt = open(r"prompts\system.txt", 'r').read()
+        instructions = open(r"prompts\instructions.txt", 'r').read()
+        output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown using level 1 and level 2 headings and bolding key words where needed"
+        user_prompt = f'{RAG}\n\n {instructions} \n\n{query} + {output_format}'
         def generate():
             stream = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt + output_format}
+                    {"role": "user", "content": user_prompt}
                 ],
                 stream=True
             )
