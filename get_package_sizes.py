@@ -2,7 +2,7 @@ import os
 import sys
 from pip._internal.operations.freeze import freeze
 
-## This code is used to get the size of the packages that are installed in the backend/venv
+## This code is used to get the size of the packages that are installed in the backend/venv as way to estimate the docker file size during deployment
 
 def get_package_size(package_name):
     try:
