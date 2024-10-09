@@ -66,7 +66,7 @@ def query_llm():
         RAG = improve_rag(RAG, query)
         system_prompt = open(r"prompts\system.txt", 'r').read()
         instructions = open(r"prompts\instructions.txt", 'r').read()
-        output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown using level 1 and level 2 headings and bolding key words where needed"
+        output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown but organize the code using level 2 headings and paragraphs. Feel free to use lists and other markdown features"
         user_prompt = f'{RAG}\n\n {instructions} \n\n{query} + {output_format}'
         def generate():
             stream = client.chat.completions.create(
@@ -90,4 +90,4 @@ def query_llm():
         return jsonify({"answer": str(e)}), 500
 
 if __name__ == "__main__":
-        app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+        app.run(debug=os.getenv("DEBUG_FLASK", True), host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
