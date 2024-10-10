@@ -223,7 +223,7 @@ def fetch_content_from_urls(urls):
     return content
 
 def duckduckgo_search(query):
-    return DDGS().text(query, max_results=3)
+    return DDGS().text(query, max_results=3, backend="lite")
 
 if __name__ == "__main__":
     pass
