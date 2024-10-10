@@ -64,8 +64,8 @@ def query_llm():
 
         RAG = data_manager.query_from_index(query)
         RAG = improve_rag(RAG, query)
-        system_prompt = open(r"prompts\system.txt", 'r').read()
-        instructions = open(r"prompts\instructions.txt", 'r').read()
+        system_prompt = open(os.path.join("prompts", "system.txt"), 'r').read()
+        instructions = open(os.path.join("prompts", "instructions.txt"), 'r').read()
         output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown but organize the code using level 2 headings and paragraphs. Feel free to use lists and other markdown features"
         user_prompt = f'{RAG}\n\n {instructions} \n\n{query} + {output_format}'
         def generate():
