@@ -54,11 +54,23 @@ def improve_rag(RAG, query):
 def test():
     return "Server is running"
 
+def reformat_chat_data(chat_data):
+    reformatted_data = []
+    if not chat_data:
+        return ""
+    for entry in chat_data:
+        speaker = "User" if entry['isUser'] else "Bot"
+        reformatted_data.append(f"{speaker}: {entry['text']}\n")
+    return "".join(reformatted_data)
+
 @app.route("/query", methods=["POST"])
 def query_llm():
     try:
         data = request.get_json()
         query = data.get("query")
+        priorConversation = data.get("priorConversation")
+        reformatted_chat = reformat_chat_data(priorConversation)
+
         if not query:
             return jsonify({"detail": "Query is required"}), 400
 
@@ -67,7 +79,7 @@ def query_llm():
         system_prompt = open(os.path.join("prompts", "system.txt"), 'r').read()
         instructions = open(os.path.join("prompts", "instructions.txt"), 'r').read()
         output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown but organize the code using level 2 headings and paragraphs. Feel free to use lists and other markdown features"
-        user_prompt = f'{RAG}\n\n {instructions} \n\n{query} + {output_format}'
+        user_prompt = f'Use any information from the current conversation history where needed:\n{reformatted_chat}\n\n{RAG}\n\n {instructions} \n\n{query} + {output_format}'
         def generate():
             stream = client.chat.completions.create(
                 model="gpt-4o-mini",
@@ -84,7 +96,7 @@ def query_llm():
                     yield content
         print(f"Response to question \"{query}\" has been generated")
         return Response(generate(), content_type="text/plain-text")
-    
+
     except Exception as e:
         print(e)
         return jsonify({"answer": str(e)}), 500
