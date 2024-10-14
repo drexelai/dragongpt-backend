@@ -1,0 +1,654 @@
+Question,Correct Answer (main essence),DragonGPT,ChatGPT,Google Search,Perplexity,Bleu score of DragonGPT with Correct Answer
+Who is the new president of Drexel,"Denis O'Brien has been appointed as the interim president of Drexel University, bringing his extensive leadership experience and connection to the institution to guide Drexel through this transitional period.","Denis P. O’Brien has been appointed as the interim president of Drexel University, effective July 16, 2024. He is a long-serving trustee of the university and previously held the position of Senior Executive Vice President and CEO of Exelon Utilities.
+
+
+For more information, you can visit the following links:
+
+
+
+Drexel News Release
+
+Drexel University Homepage
+","As of July 2024, Denis O'Brien has been appointed as the interim president of Drexel University. He took over following John Fry's departure, who became the new president of Temple University. O'Brien, a Drexel alumnus, has been involved with the university for many years, having served on its board of trustees. His leadership experience includes roles in the energy sector, most notably as the CEO of Exelon Utilities​(
+PhillyVoice
+).",Drexel trustee and former Exelon Corporation executive Denis O'Brien will serve as the university's interim president. Drexel University's Board of Trustees has appointed Denis P. O'Brien interim president of the University effective today,"Denis P. O'Brien has been named the interim president of Drexel University123. Here are some key details about this appointment:
+Background on Denis O'Brien
+O'Brien is a current member of Drexel's Board of Trustees and has served in that role for two decades23.
+He received his MBA from Drexel's Bennett S. LeBow College of Business2.
+O'Brien previously served as CEO of PECO Energy and senior vice president of Exelon Corporation, PECO's parent company3.
+Appointment Details
+O'Brien was appointed by Drexel's Board of Trustees on July 17, 202423.
+He succeeds John Fry, who left Drexel to become the new president of Temple University23.
+O'Brien will serve as interim president until a permanent successor is appointed2.
+O'Brien's Perspective
+In a statement, O'Brien expressed gratitude for the appointment, saying:
+""It is a privilege to assume this position during Drexel's period of change. Having been an alumnus and board member of Drexel for over 20 years, I have firsthand experience of the university's journey towards eminence.""2
+He emphasized his commitment to collaborating with faculty, staff, students, and trustees to maintain Drexel's ongoing success during this transition period.",0.33
+which clubs on campus are related to AI?,"The Drexel Society of Artificial Intelligence (DSAI) is a student-run organization at Drexel University dedicated to fostering interest, knowledge, and innovation in the field of Artificial Intelligence (AI).","Drexel University has several student organizations focused on artificial intelligence, including:
+
+
+
+Drexel AI: This club helps students become familiar with the fields of Artificial Intelligence and Machine Learning.
+
+Drexel Blockchain: While primarily focused on blockchain technology, it often intersects with AI applications in its discussions and projects.
+
+
+For more details about student organizations at Drexel, you can visit the Drexel CCI Student and Professional Organizations page.
+","Drexel AI: This student organization is specifically focused on AI. They host workshops, guest lectures, and hackathons, and provide resources for students interested in AI research and development.
+
+Drexel Data Science and AI Club: This club caters to students interested in data science, machine learning, and AI. They organize coding bootcamps, industry talks, and data competitions.
+
+Drexel Robotics Club: While primarily focused on robotics, this club often integrates AI and machine learning in their projects, especially related to autonomous systems and robotics competitions.
+
+Women in Computing Society (WiCS): Although broader in scope, WiCS offers support to women in tech fields, including AI, and hosts AI-related workshops, talks, and networking events.
+
+Dragonhacks: Drexel’s annual hackathon often includes projects and challenges centered around AI, data science, and machine learning, providing students with opportunities to explore AI applications in various fields.","Drexel Society of Artificial Intelligence (DSAI): This club is specifically focused on AI and provides opportunities for students to engage with AI-related topics, events, and projects.
+Note: Although I couldn’t find detailed information on DSAI’s activities, events, or meeting schedules, it is explicitly mentioned as an AI-related club on Drexel’s campus.
+
+Additionally, while not exclusively focused on AI, the following clubs may have AI-related activities or interests:
+
+WiCS (Women in Computing and Science): Although primarily focused on women-identifying students in computing-related majors, WiCS may occasionally host events or discussions related to AI, given its broader scope in computing and technology.
+Weekend Warriors: This club’s focus on hackathons and coding events may occasionally involve AI-related projects or challenges.","Drexel AI and Machine Learning Group: This newly formed group aims to enhance understanding of AI and machine learning applications across various disciplines. It focuses on how these technologies can be utilized as educational tools and opportunities for students and faculty alike7.
+Drexel Computing and Informatics Student Organizations: Within the College of Computing & Informatics, various student organizations exist that engage with AI topics. These include clubs that promote learning in artificial intelligence, machine learning, and data science1.
+Extended Reality Club: While primarily focused on virtual and augmented reality, this club often intersects with AI technologies, exploring their applications in immersive environments1.",0.1271
+What are the computer science classes related to AI I can take?,"CS 380 Artificial Intelligence 3.0 Credits
+CS 383 Machine Learning 3.0 Credits
+CS 387 Game AI Development 3.0 Credits
+CS 481 Advanced Artificial Intelligence 3.0 CreditsCS 482 Robust Machine Learning 3.0 Credits
+CS 486 Topics in Artificial Intelligence 3.0 Credits
+CS 610 Advanced Artificial Intelligence 3.0 Credits
+CS 611 Game Artificial Intelligence 3.0 Credits
+CS 613 Machine Learning 3.0 Credits
+CS 614 Applications of Machine Learning 3.0 Credits
+CS 615 Deep Learning 3.0 Credits
+CS 616 Robust Deep Learning 3.0 Credits
+CS 617 Reinforcement Learning 3.0 Credits
+","You can take the following computer science classes related to artificial intelligence:
+
+
+
+CS 611 - Game Artificial Intelligence
+
+
+
+Focuses on AI techniques for computer games.
+
+Prerequisite: CS 510 [Min Grade: C].
+
+More Info
+
+
+
+CS 387 - Game AI Development
+
+
+
+Emphasizes AI techniques used in various game genres.
+
+Prerequisites: CS 260 [Min Grade: C] and CS 380 [Min Grade: C].
+
+More Info
+
+
+
+CS 380 - Artificial Intelligence
+
+
+
+Covers foundations of AI including programming in an AI language.
+
+Prerequisites: CS 260 [Min Grade: C] and CS 270 [Min Grade: C].
+
+More Info
+
+
+
+INFO 629 - Applied Artificial Intelligence
+
+
+
+Discusses various AI methods and their applications.
+
+Prerequisites: INFO 620 [Min Grade: C] or CS 501 [Min Grade: C] or CS 570 [Min Grade: C].
+
+More Info
+
+
+
+CS 481 - Advanced Artificial Intelligence
+
+
+
+Focuses on decision-making under uncertainty and learning.
+
+Prerequisites: CS 380 [Min Grade: D] and (MATH 311 [Min Grade: D] or MATH 410 [Min Grade: D] or ECE 361 [Min Grade: D]).
+
+More Info","CS 471: Artificial Intelligence
+This is a core course that introduces the fundamentals of AI, including search algorithms, knowledge representation, reasoning, machine learning, and robotics.
+2. CS 472: Machine Learning
+This course focuses on different machine learning models, algorithms, and techniques. Topics include supervised and unsupervised learning, neural networks, deep learning, and reinforcement learning.
+3. CS 510: Artificial Intelligence I
+A graduate-level course offering advanced topics in AI. It covers intelligent agents, probabilistic reasoning, and machine learning algorithms in depth.
+4. CS 570: Machine Learning II
+A deeper dive into machine learning, exploring advanced algorithms and applications, including deep learning architectures and complex models for large-scale data analysis.
+5. CS 577: Deep Learning
+A specialized course in deep learning, which is a subfield of machine learning. It covers neural networks, convolutional neural networks (CNNs), recurrent neural networks (RNNs), and generative models.
+6. CS 575: Natural Language Processing
+This course focuses on the interaction between computers and human language, covering techniques like parsing, machine translation, and sentiment analysis, which are crucial in AI applications.","Intro to AI: This course provides an introduction to the field of Artificial Intelligence, covering its history, principles, and applications.
+Machine Learning: This course explores the fundamentals of machine learning, including supervised and unsupervised learning, neural networks, and deep learning.
+Deep Learning: This course delves deeper into the topic of deep learning, covering topics such as convolutional neural networks, recurrent neural networks, and generative adversarial networks.
+Game AI: This course focuses on the application of AI techniques to game development, including pathfinding, decision-making, and game-playing agents.","Courses and Electives
+While specific course names aren't provided, the MSAIML program likely includes classes in:
+Machine learning
+Deep learning
+Neural networks
+Computer vision
+Natural language processing
+Big data analytics
+AI ethics",0.21
+How many co ops can I do  and how do they work,"4-Year, 1 Co-op Program:
+
+In this track, students complete one six-month co-op experience during their time at Drexel, which allows them to gain valuable hands-on experience while still graduating in four years. This option is ideal for students who want to enter the workforce sooner while still getting a taste of real-world job experience. It balances academic coursework with a brief period of professional development.
+5-Year, 3 Co-op Program:
+
+For students who choose the 5-year, 3 co-op program, they will alternate between six-month periods of full-time study and six-month co-op experiences over the course of five years. This track provides extensive real-world experience, as students get the chance to complete three different co-ops, potentially with different employers or in different roles, which helps them build a strong professional portfolio before graduating. Although it extends the time spent in school by a year, students often graduate with a clearer sense of their career path and a strong network of industry connections.","The number of co-ops a student can participate in at Drexel University depends on several factors, including their chosen major, the number of credits transferred (for transfer students), and their selected academic calendar. 
+
+
+How Co-ops Work
+
+Co-op at Drexel allows students to gain real-world experience while integrating their academic knowledge. Students can co-op with various employer partners across business, industrial, governmental, research, and non-profit sectors.
+
+
+For more detailed information, you can visit the following links:
+
+
+
+Drexel Co-op Overview
+
+Steinbright Career Development Center","1. Three Co-op Option (Five-Year Program)
+Duration: 18 months of work experience (3 six-month co-ops).
+Timeline: This option allows you to alternate between full-time study and co-op work experiences, resulting in a five-year undergraduate degree. Each co-op is six months long, typically in the sophomore and junior years, with time in between for academic study.
+Who is it for?: This is the most common option at Drexel and is highly recommended if you want significant work experience before graduating.
+2. One Co-op Option (Four-Year Program)
+Duration: 6 months of work experience (1 six-month co-op).
+Timeline: This option allows you to complete one co-op during your time at Drexel and finish your degree in four years. It’s a good balance between gaining work experience and finishing your degree more quickly.
+Who is it for?: This is ideal for students who want work experience but prefer a shorter time to graduation.","Five-year program:
+Three co-op experiences, each lasting six months
+Alternates with six months of classroom study
+Students can gain up to 18 months of hands-on work experience
+Four-year program:
+One co-op experience, lasting six months
+Can be taken during the summer or fall/winter/spring terms
+Students can gain up to 6 months of hands-on work experience","Three Co-op Option (Five-Year Program):
+This allows you to complete up to 18 months of work experience
+You'll participate in three separate co-op experiences
+Each co-op lasts for 6 months
+This is the most popular option, maximizing the benefits of Drexel's co-op program1
+One Co-op Option (Four-Year Program):
+This allows you to complete one 6-month co-op experience
+It's a shorter program overall but still provides valuable work experience1",0.5155
+Where do I go to register for classes?,"Drexel One, Academics, then click register for courses. Choose the term, and select continue","To register for classes at Drexel University, you need to log in to DrexelOne and navigate to the Academics tab. From there, select the Register for Course option in the Registration channel.
+
+
+For more detailed information, you can visit:
+
+
+
+Course Registration Information
+
+DrexelOne Login","Log into DrexelOne:
+
+Go to drexelone.drexel.edu and sign in with your Drexel username and password.
+Navigate to Registration:
+
+Once logged in, select the ""Academics"" tab.
+Under ""Academics,"" you will find the ""Register for Classes"" link. Click on it to proceed.
+Select the Term:
+
+Choose the academic term for which you want to register.
+Add Classes:
+
+You can search for classes by subject, course number, or keywords.
+Add the selected classes to your cart and proceed to registration.
+Confirm Enrollment:
+
+After adding classes, review your selections and submit the registration.","Log in to Drexel One: Access your Drexel One account, where you’ll find the “Academics” tab.
+Schedule Ahead: Click on “Schedule Ahead” to create a temporary schedule for the term.
+Browse for Classes: Select “Instructional Methods” from the drop-down menu to filter classes by remote asynchronous, online, or other formats.
+Choose Your Courses: Review course details and select the desired sections.
+Verify Your Registration: Before the start of the term, thoroughly review your final registration to ensure accuracy.","Log into DrexelOne: Use your User ID and password, which are the same as your Drexel email account credentials.
+Navigate to the Academics Tab: Once logged in, click on the ""Academics"" tab.
+Select Course Registration:
+Click on ""Register for Course"" in the Registration channel.
+Then select ""Check Course Availability"" to see available classes for the term you want to register for.
+Choose Your Term: From the drop-down menu, select the term you wish to register for and click ""Continue.""
+Search for Classes:
+In the ""Browse for Classes"" channel, you can filter by instructional method (e.g., Face to Face, Online).
+Enter your search criteria and click ""Search.""
+Add Courses: Select the course title to view details and then add it to your schedule.
+Confirm Enrollment: After registering, make sure to confirm your enrollment before the start of classes.",0.1214
+How many Division 1 sports teams does Drexel have?,18 Division 1 NCAA Sports in in the Colonial Athletic Association,"Drexel University Division 1 Sports Teams
+
+Drexel University has a total of 18 NCAA Division I sports teams. These teams include a variety of men's and women's sports that compete primarily in the Coastal Athletic Association (CAA).
+
+
+List of Division I Sports Teams
+
+
+Men's Sports:
+
+
+
+Basketball
+
+Crew
+
+Lacrosse
+
+Soccer
+
+Squash
+
+Wrestling
+
+
+
+Women's Sports:
+
+
+
+Basketball
+
+Crew
+
+Field Hockey
+
+Lacrosse
+
+Soccer
+
+Softball
+
+Squash
+
+Swimming & Diving
+
+Tennis
+
+
+
+
+For more detailed information about Drexel's athletic programs, you can visit the Drexel Dragons Athletics website.","Drexel University has 18 Division I sports teams, known as the Drexel Dragons","Drexel University has 18 NCAA Division I sports teams, which include nine men's and nine women's teams. ","Drexel University has 18 NCAA Division I sports teams, as mentioned in the snippet: “Over 470 Drexel student-athletes compete in 18 Division I NCAA sports in the Colonial Athletic Association.”",0.303
+How can I get a co op outside the drexel system?,"To maximize your job search efforts, it's important to apply through multiple channels. First, apply directly on the company’s website, as this often shows serious intent and ensures your application goes through official channels. Tailor your resume and cover letter for each specific job, highlighting skills that match the job description. Next, leverage LinkedIn by optimizing your profile with relevant keywords and a clear summary of your experience and aspirations. Apply for positions listed there, and engage with company posts to increase your visibility. Additionally, use LinkedIn to connect with employees and recruiters from the company, sending polite and professional messages to express interest in the role. Finally, networking is key—attend industry events, reach out to your existing network for introductions, and actively seek opportunities to build connections with professionals in your field. Personal recommendations can often give your application an edge.","You can work for a company outside of Drexel's online search system, SCDCOnline. To do this, you need to:
+
+
+
+Submit an Official Offer Letter: This should include the job title, hours per week, and hourly wage (or a statement of being unpaid).
+
+Provide a Detailed Job Description: Include an overview of the company, tasks or responsibilities, and any necessary qualifications.
+
+Complete Required Forms: Fill out the Employer Agreement Form and the Student Co-op Registration Agreement form.
+
+
+For more information, visit the Steinbright Career Development Center or refer to the cooperative education section on the Drexel University website.","Identify Potential Employers:
+Networking: Reach out to contacts, attend networking events, and use platforms like LinkedIn to connect with professionals in industries you’re interested in.
+Job Search Websites: Use external job boards like Indeed, Glassdoor, or industry-specific sites to find opportunities.
+Professional Organizations: Join professional organizations related to AI, computer science, or your field of study. These organizations often share exclusive job opportunities with their members.
+2. Contact Employers:
+Cold Emails and Applications: If a company doesn’t list co-op or internship opportunities, you can send a professional email expressing your interest and why you think you’d be a good fit. Attach your resume and explain how Drexel’s co-op program works.
+Personalized Approach: Make sure each email or application is tailored to the specific employer, highlighting relevant skills or experience that align with the company’s needs.
+3. Coordinate with the Steinbright Career Development Center (SCDC):
+Once you’ve identified an opportunity, you need to work with Drexel’s Steinbright Career Development Center to make it an official co-op.
+Approval Process: The position must meet Drexel’s co-op requirements (such as duration, full-time status, and relevance to your field). The SCDC will help verify this with the employer.
+Paperwork: You will need to complete the necessary paperwork with SCDC to ensure the co-op is recognized as part of your academic program.","Job Search Platforms: Utilize online job boards and platforms, such as LinkedIn, Indeed, Glassdoor, or Monster, to search for co-op positions outside the Drexel network. You can filter your search by location, industry, and job type to find relevant opportunities.
+Professional Associations: Research industry-specific associations and networks, like the National Association of Social Workers or the American Institute of Graphic Design, which often list job openings, including co-op positions, on their websites or through member directories.
+Company Websites: Directly visit the websites of companies you’re interested in working for and search for co-op or internship opportunities. Many companies list their available positions on their careers pages.
+Networking: Leverage your personal and professional networks, including friends, family, and colleagues, to learn about potential co-op opportunities. Attend industry events, conferences, and job fairs to connect with potential employers and learn about their co-op programs.
+","Self-Directed Search: While not explicitly mentioned in the search results, you could potentially find your own co-op opportunity and propose it to the Steinbright Career Development Center for approval. This would involve:
+Networking with companies or organizations in your field of interest
+Utilizing job search platforms to find relevant positions
+Reaching out to Drexel alumni who might be able to offer or suggest opportunities",0.4448
+What work study positions are available and where do I apply for them?,"If your financial aid offers you work study, go to Drexel One and select Federal Work Study. Look through the positions and contact the hiring supervisor to apply for the job with your resume. You can apply to as many as you would like","o find available Federal Work-Study positions at Drexel University, you need to accept your Federal Work-Study award first. After that, you can view the positions by following these steps:
+
+
+
+Log in to DrexelOne.
+
+Click on the Billing + Financial Aid tab.
+
+Go to your Financial Aid package and select Federal Work-Study.
+
+Click on the Federal Work-Study Positions link to see available opportunities.
+
+
+For more detailed information, you can visit Drexel Central's Work-Study page.","At Drexel University, work-study positions are available through the Federal Work-Study program, which is designed to provide part-time employment for eligible students. To get started, you need to be awarded Federal Work-Study as part of your financial aid package. Here’s how you can find and apply for available positions:
+
+Accept Your Award: Log in to DrexelOne and accept your Federal Work-Study award.
+
+Find Positions: After accepting your award, navigate to the Billing + Financial Aid tab, then look for the Federal Work-Study section. You can view available positions through the Federal Work-Study Positions link.
+
+Application Process: Once you find a position that interests you, contact the hiring supervisor listed in the job posting with your résumé and a letter of interest. Make sure to include the job title in your inquiry.","Available positions: FWS provides part-time jobs for undergraduate and graduate students with financial need, allowing them to earn money for education. The positions are available across various departments and offices on campus.
+Application process: If you are offered Federal Work Study for the upcoming aid year, follow these steps to view and apply for available positions:
+Log in to DrexelOne to view available positions.
+Contact the hiring supervisor listed in the job listing to inquire about the open position, and submit your résumé and letter of interest.
+Job postings: The Federal Work-Study SharePoint is the primary platform for employers to post job openings. You can access the platform through Drexel’s Human Resources department.
+Employer guidelines: For employers, the Federal Work-Study SharePoint provides a list of submitted job postings, allowing them to edit and manage their postings. They must also schedule and conduct interviews, and complete Electronic Personnel Action Forms (EPAFs) for hired students.","Check your eligibility:
+Federal Work-Study is a need-based program offered as part of your financial aid package.
+You must have indicated interest in the program via your Drexel portal.
+You need to accept the award in DrexelOne to use the funding.
+Where to find positions:
+Log into DrexelOne to view available work-study positions.
+How to apply:
+When you find a position you're eligible for, contact the individual listed in the posting to set up an interview.
+Work-study supervisors make the final hiring decisions.",0.2231
+Which professors at Drexel are known for having the most industry connections for internships or research opportunities?,"Professors within the College of Computing & Informatics, the College of Engineering, and the LeBow College of Business are known to have strong industry ties, particularly in Philadelphia’s tech and finance sectors. For example, professors who have worked in the industry often mentor students and connect them with industry professionals for internships and research projects.","I'm not sure which specific professors at Drexel are known for having the most industry connections for internships or research opportunities based on the provided information. However, you can find details on faculty expertise and their involvement in industry partnerships through the following resources:
+
+
+
+Drexel LeBow College of Business Faculty and Research
+
+Drexel University College of Engineering Industry Partnerships","Rajneesh Suri - As the vice dean for research and strategic partnerships, Suri is involved in various interdisciplinary projects and has played a crucial role in connecting students with industry opportunities through the Drexel Solutions Institute (DSI)​(
+Exel Magazine
+).
+
+Hasan Ayaz - An associate professor in biomedical engineering, Ayaz is leading innovative research projects that involve collaborations with companies, such as those related to esports and neuroergonomics. His work often integrates students into research projects, enhancing their industry exposure​(
+Exel Magazine
+)​(
+Drexel Home
+).
+
+Jonathan Spanier - The department head of Mechanical Engineering and Mechanics, Spanier has fostered partnerships with industry leaders, creating pathways for students to engage in hands-on projects that bridge academic knowledge and practical applications​(
+Drexel Home
+).
+
+Lauren D’Innocenzo - An associate professor of organizational behavior, D’Innocenzo has also collaborated on projects that leverage the expertise of the university while engaging students in real-world challenges, further enhancing internship and research opportunities​(","Professors in the College of Engineering: Drexel’s College of Engineering has a strong reputation for co-op and research opportunities. Professors like Dr. Brian Lofink (Mechanical Engineering) have industry connections, as mentioned in the Cooperative Education snippet. Other professors in the College of Engineering, such as those in the departments of Biomedical Engineering, Electrical and Computer Engineering, and Materials Science and Engineering, may also have industry connections.","Based on the search results provided, there isn't specific information about individual Drexel professors and their industry connections for internships or research opportunities",0.2235
+What are some of the best study spots on Drexel’s campus?,"Hagerty Library, Korman Center, the second floor of the URBN Center, the Rush Building, Pearlstein building, and the top floor of the Health Sciences building, and Ross Commons","Some great places to study on Drexel’s campus include:
+
+
+
+Korman Center: Offers a quiet space with various study rooms.
+
+Disque Hall: Typically used for physics and chemistry seminars which can also double as study areas when not in use.
+
+City View Lounge: A relaxed space known for a great view, ideal for focused study sessions.
+
+
+For a comprehensive list of study spots, you can visit The Triangle or check out UWire.","Hagerty Library - The only library dedicated to undergraduates, it provides a mix of quiet spaces and collaborative areas. It's a go-to for many students during study sessions​(
+The Triangle
+)​(
+Drexel Home
+).
+
+11th Floor of the College of Computing and Informatics - This floor features stunning views of the Philadelphia skyline, along with study booths and individual rooms equipped with whiteboards​(
+The Triangle
+).
+
+Madis Coffee - A cozy coffee shop popular among students, it's perfect for a study session in a bustling atmosphere​(
+The Triangle
+).
+
+Top Floor of the Health Sciences Building - A peaceful area filled with natural light, ideal for focusing on studies with a great view of the campus​(
+The Triangle
+).
+
+Ross Commons - Located above Sabrina’s Cafe, it offers a relaxed environment with amenities like pool tables and comfortable seating, along with access to food​(
+The Triangle
+)​(
+Drexel Home
+).
+
+Garden outside the Rush Building - A hidden gem, this garden provides a serene outdoor study environment surrounded by greenery and the sounds of a fountain​(
+The Triangle
+)​(
+The Triangle
+).
+
+Lancaster Walk - A popular outdoor space with picnic tables and lounge chairs, perfect for studying in warmer weather​(
+The Triangle
+)​(
+The Triangle
+).
+
+Saxbys Coffee - Managed by students, this cafe combines a coffee shop vibe with study-friendly amenities​(
+Drexel Home
+).","Based on the provided search results, here are some of the best study spots on Drexel’s campus:
+
+11th floor of the College of Computing and Informatics: Offers beautiful city views, floor-to-ceiling windows, and various study spaces, including long tables, individual study rooms with whiteboards, and study booths.
+Top floor of the Health Sciences Building: Provides a peaceful and quiet environment with natural light, tables, chairs, and couches. It’s a great spot for focused studying.
+Garden outside the Rush Building: A secluded outdoor spot with a small fountain, greenery, and tables and chairs. Perfect for those who prefer studying in a more tranquil setting.
+Middle floor of Hagerty Library: A classic study spot with a balance of silence and slight activity. It’s an ideal location for students who want to chat with friends while still getting work done.
+Ross Commons (above Sabrina’s Cafe): A quieter space with a pool table, comfortable seating, and a relaxed atmosphere. It’s a great spot to study or socialize with friends.
+Lancaster Walk: A popular outdoor spot with lounge chairs and grassy areas. It’s perfect for studying on a nice day or taking a break from indoor spaces.","Top Study Spots at Drexel
+W.W. Hagerty Library:
+The bottom floor is particularly noted for its quiet atmosphere, making it ideal for focused study.
+Offers group study rooms that can be reserved online, as well as a quiet room for those needing absolute silence.
+The Summit:
+Features a spacious study room that requires access through a resident.
+Includes collaboration rooms for group work, though these do not require reservations.
+LeBow College of Business:
+The second floor has collaboration rooms available for students enrolled in LeBow courses.
+Reservations are required, providing a professional environment for business-related studies.
+MacAlister Hall:
+Contains a small study room between the Writer’s Room and the Barnes & Noble, offering a quieter space away from the busier areas.
+Lincoln University City:
+An open space at the end of the hall on the fourth floor provides a comfortable area for studying.
+Saxbys Coffee Locations:
+Two Saxbys on campus offer a casual atmosphere with good coffee and free Wi-Fi, suitable for both individual and group study sessions.",0.0941
+"After freshman year, where do most students live?","Students will usually live in American Campus Community (ACC) housing for their second year to fulfill the 2 year residency requirement. After second year, most students live off campus in West Philly or on Upenn's campus. Students can request to be exempt from this via commuting or co op opportunities","After freshman year, students at Drexel University have the option to live in various types of housing. 
+
+
+
+Residence Halls: Many upper-class students choose to continue living in Drexel residence halls, which offer suite-style living for more independence.
+
+Affiliated Housing: Students can also opt for Drexel-affiliated properties operated by American Campus Communities for more independent living options.
+
+
+For more details on housing after freshman year, you can visit the following links:
+
+
+
+Housing and Residence Life
+
+Living On & Off Campus
+","After freshman year at Drexel University, most students tend to live off-campus rather than in university housing. While some students may choose to remain in on-campus housing options such as university-owned residence halls, the majority prefer the independence and often lower costs associated with off-campus apartments​(
+The Triangle
+)​(
+The Triangle
+).","According to the search results, after freshman year, most Drexel University students (79%) live off-campus, as reported in “Here’s What Student Life Is Like At Drexel University”. This suggests that a significant majority of students opt for off-campus housing after their first year.
+
+On-Campus Options
+
+However, it’s worth noting that graduate students are invited to live in suite-style housing on the University City Campus, as mentioned in “On-Campus Housing Options”. This option is available through DrexelOne (the Campus+Community tab) after the application opens.
+
+No Specific Requirement
+
+Contrary to the initial requirement for first- and second-year students to live in university-approved housing or residence halls, there is no specific requirement for students to live on-campus after their freshman year. Students are free to choose off-campus housing options that suit their needs and preferences.","Off-Campus Housing: Approximately 80% of Drexel students choose to live off-campus after their first year. This trend is driven by various factors, including the desire for more independence, cost savings, and personal preferences for living arrangements.
+Popular Neighborhoods:
+University City: This area is particularly favored due to its proximity to campus and vibrant community atmosphere.
+Other neighborhoods include West Oak Lane, Fishtown, South Philadelphia, and Northern Liberties, which offer a range of housing options from apartments to shared houses.
+Housing Options:
+Students can find various types of accommodations, including shared homes, studios, and multi-bedroom apartments. Many properties are well-furnished and equipped with modern amenities.
+Rental prices vary widely, but co-living arrangements can be more affordable, with costs around $500 per month in some areas.",0.3857
+How long do I need to live on campus for?,"full-time undergraduate students whose permanent address, as stated in their official University Record, is outside of a 10-mile radius of the University City Campus, are required to live in a Drexel Residence Hall for their first year. During the students second year, they are required to live in a Drexel residence hall, Drexel fraternity/sorority house (with invitation from the organization), or University Affiliated Housing (American Campus Communities': The Summit, Chestnut Square, or University Crossings), or the Haven at Drexel.","First-year students at Drexel University are required to live on campus as part of the 2-Year Residency Program. This means that all first-year students must reside in a Drexel residence hall for at least their first academic year.
+
+
+For more information, you can visit:  
+
+
+
+Drexel On-Campus Housing Information  
+
+First-Year Housing Details","After completing your freshman year, you have the option to either continue living on campus in upperclassman housing or move off-campus. ","According to the search results, Drexel University has a 2-Year Residency Program requirement for students. As a freshman, you are required to live in a Drexel residence hall, Drexel fraternity/sorority house (with invitation from the organization), or University Affiliated Housing (American Campus Communities’ properties: The Summit, Chestnut Square, or University Crossings), or The Haven at Drexel. This requirement applies to your first two years at Drexel.
+
+After your second year, you are not required to live on campus, but many upper-class and transfer students choose to do so for its convenient location, flexible terms, and ability to pay via the Drexel eBill. However, it’s essential to note that students seeking off-campus housing options can find resources on the Off-Campus Housing Website.","At Drexel University, students are required to live on campus for two years. This policy applies to all first-year and second-year students, ensuring they have a comprehensive campus experience that includes various learning and lifestyle opportunities",0.027
+Do I need to get a meal pass?,"Yes, it is common for first-year students living on campus at many universities, including Drexel, to be required to have a dining plan. This ensures that students have access to meals without needing to leave campus, which helps foster community engagement and convenience, especially for those adjusting to college life. The specific details, such as the available meal plan options and costs, would typically be outlined by the university's housing and dining services.","As a first-year student living in a Drexel residence, you are required to purchase one of the three First-Year All-Access Dining Plans for the fall, winter, and spring terms. For further information regarding the dining plans, including options, rates, and how to register, you can visit the following links:
+
+
+
+Drexel Campus Dining  
+
+Dining Plan Portal","t Drexel University, while it's not mandatory to get a meal plan, many students find it convenient to do so, especially if they live on campus. Here are some key points to consider:
+
+Meal Plan Options: Drexel offers several meal plan options that cater to different dietary preferences and lifestyles. These plans typically include a set number of meals per week, as well as dining dollars that can be used at various campus dining facilities .","ased on the provided search results, it appears that Drexel University offers various meal plan options for students, including First-Year/Freshman Dining Plans and other Dining Plans. These plans include a combination of meal swipes and Dining Dollars.
+
+Meal swipes can be used at specific locations, such as the all-you-care-to-eat Handschumacher Dining Center (Creese Student Center), The Café @ Perelman Center for Jewish Life, and Urban Eatery (34th & Lancaster).
+
+Dining Dollars, on the other hand, can be used at all Drexel Campus Dining locations, including Northside Dining Terrace, ThirtyOne41, and Starbucks (at Gerri C. LeBow Hall). Dining Dollars are not redeemable for cash and can be changed during the first two weeks of each term.
+
+As a student, you are eligible to participate in the electronic refund program, and you will need to present your physical DragonCard to access your meal plan.
+
+It is recommended that you review the Drexel Dining Plans and food options to determine which meal plan best suits your needs and lifestyle. You can also request an accommodation due to need or extenuating circumstance.
+
+In summary, while you may not need a traditional “meal pass,” you will need to select a meal plan option and use your DragonCard to access your meal plan benefits.","At Drexel University, first-year students are required to have a meal plan while living on campus. This requirement ensures that students have access to meals and can participate in the campus dining experience.
+Meal Plan Options
+Types of Plans: There are different meal plans available, including options with unlimited meal swipes or a set number of meals per week, along with Dining Dollars for use at various dining locations on campus.",0.5003
+Whats the difference between DragonDollars and Dining Dollars?,"DragonDollars are funds that can be loaded to your DragonCard and used like a debit card at Drexel Campus Dining locations, local dining and retail locations, and many vending machines on campus. DragonDollars do not expire. Wheras Dining Dollars can be used at all Drexel Campus Dining locations including Northside Dining Terrace (featuring Chick-fil-A, Local Restaurant Row, AFC Sushi, and The Market), ThirtyOne41, and Starbucks (at Gerri C. LeBow Hall). Dining Dollars are not redeemable for cash.","DragonDollars and Dining Dollars are both forms of currency used at Drexel University, but they serve different purposes:
+
+
+
+DragonDollars: These can be used for a variety of purchases on campus, including dining, laundry, and bookstore items.
+
+Dining Dollars: These are specifically allocated for food purchases at various dining locations on campus and may not be used for other types of purchases.
+
+
+For more detailed information, you may visit the Drexel Dining Services website here.","DragonDollars
+Usage: DragonDollars can be used at various campus locations, including dining services, vending machines, and bookstores. They are a flexible payment option and can also be used at select off-campus merchants .
+Balance: The balance of DragonDollars rolls over from term to term as long as you remain enrolled at Drexel .
+Dining Dollars
+Usage: Dining Dollars are specifically for use at dining facilities on campus. They are part of the meal plans and can only be spent at designated dining locations .
+Expiration: Any unused Dining Dollars typically expire at the end of the academic year .","Based on the provided search results, here’s a summary of the differences between Dragon Dollars and Dining Dollars:
+
+Usage: Dragon Dollars can be used for food and non-food purchases, while Dining Dollars can only be used to purchase food.
+Acceptance: Dragon Dollars are accepted at both on-campus and off-campus locations, including privately owned restaurants and retailers in University City. Dining Dollars, on the other hand, are limited to on-campus dining locations.
+Expiration: Dragon Dollars do not expire, whereas the expiration policy for Dining Dollars is not explicitly stated in the search results.
+Availability: Dining Dollars are included in certain dining plans, such as First-Year/Freshman Dining Plans and other plans, whereas Dragon Dollars are a separate account that can be loaded onto a DragonCard.
+Refund: Dragon Dollars account balances in excess of $15 are available for refund when the cardholder’s relationship with the University is terminated. The refund policy for Dining Dollars is not mentioned in the search results.","DragonDollars
+Usage: DragonDollars can be used at various campus locations, including dining facilities and retail outlets. They function similarly to a prepaid debit card.
+Flexibility: They can be spent on food, beverages, and other items at participating vendors on campus.
+Cash Equivalent: DragonDollars are not redeemable for cash and typically require a deposit at the beginning of the academic year.
+Dining Dollars
+Included in Meal Plans: Dining Dollars are specifically part of your meal plan and can be used at all Drexel Campus Dining locations.
+Functionality: They also operate like a debit card but are intended primarily for food purchases. Dining Dollars are not redeemable for cash either.
+Roll Over: Unused Dining Dollars can roll over to the next term if you purchase another meal plan within the same academic year.",0.486
+What is the best way to access mental health resources at Drexel if you need urgent help?,"While Drexel's Counseling Center provides appointments, for urgent situations, students often find faster support by contacting Drexel’s Public Safety Crisis Line or using the Drexel Guardian App, which can connect them directly to mental health resources or crisis counselors.","If you need urgent mental health assistance at Drexel, you should call the 24/7 crisis line at 215.416.3337 to speak with a trained counselor immediately. Alternatively, you can also reach out to Drexel Public Safety at 215.895.2222 or dial 911 in case of a psychological emergency.
+
+
+For more information and resources, you can visit:
+
+
+
+Drexel Counseling Center
+
+Drexel University Health & Wellness Resources","Crisis Line: Call the Drexel Counseling Center's 24/7 crisis line at 215.416.3337 to speak with a professional counselor. This is the quickest way to get immediate help.
+
+Emergency Services: If you feel unsafe or are in an emergency situation, you should call Drexel University Public Safety at 215.895.2222 or dial 911 for assistance.
+
+Text Support: You can also reach out via text by sending ""HOME"" to 741741 to connect with the Crisis Text Line for support.
+
+On-Campus Resources: The Counseling Center is located in the Creese Student Center, Suite 201. They provide various mental health services, including crisis care and outreach programs​(
+Drexel Home
+)​(
+Drexel Home
+).","If you’re a Drexel student in need of urgent mental health help, follow these steps:
+
+Crisis Phone: Call the 24/7 crisis phone line at 215.416.3337. This service is available 24 hours a day, 7 days a week, and connects you with a trained mental health professional who can provide immediate support.
+MiResource: If you’re unable to reach the crisis phone line, you can also access MiResource, a database of community mental health resources available to Drexel students. While not a direct crisis hotline, MiResource can help you find local resources and emergency services.
+In-Person or Telehealth Options: The Drexel University Counseling Center offers flexible services, including in-person and telehealth (available only for students located in Pennsylvania) appointments. If you’re experiencing a crisis, you can schedule an urgent appointment by contacting the Counseling Center directly.","Call the 24/7 crisis hotline at 215-416-3337. This is available round-the-clock for students experiencing a mental health crisis or urgent concern.
+For same-day appointments, contact the Counseling Center directly to schedule an urgent appointment. The Counseling Center offers same-day appointments for students with pressing needs.
+If it's during business hours (Monday-Friday, 8am-5pm), you can go directly to the Counseling Center at 3210 Chestnut Street to request immediate assistance.
+For after-hours emergencies, call Drexel Public Safety at 215-895-2222 or 911 for immediate help.
+You can also access the SupportLinc program, which provides 24/7 counseling with licensed professionals either in-person or virtually.",0.2829
+How flexible is Drexel’s curriculum if I want to switch majors after my first year?,"Switching majors at Drexel is possible, but the flexibility depends on the majors in question. If switching between closely related disciplines (e.g., different branches of engineering), it may be easier. Switching to unrelated fields might require taking additional prerequisite courses, which could delay graduation unless summer courses are used to catch up.","Drexel University allows undergraduate students to transfer from one academic program (major) to another at the discretion of the new program. Here are some key points regarding this process:
+
+
+
+Students must consult with the new academic program's Advisor, Department Head, or Dean.
+
+Some programs may have minimum grade point average (GPA) requirements for transfers.
+
+The 'Change of Academic Program' form must be submitted by the end of the first week of the term in which the change is intended to take effect.
+
+
+For more detailed information, you can visit the following links:
+
+
+
+Change of Academic Program Policy
+
+Drexel University Catalog
+","Drexel University offers a flexible curriculum for students who wish to switch majors after their first year. Generally, undergraduate students can change their academic major, provided they meet the minimum GPA requirements set by the new program. For most programs, a cumulative GPA of at least 2.0 is needed; however, specific programs, such as those in the College of Computing & Informatics, may require a GPA of 2.5 or higher​(
+Drexel Home
+)​(
+Drexel Home
+).
+
+To initiate a change, you'll need to submit a ""Change of Academic Program"" form, typically by the end of the first week of the term. If the request is made after that time, it will take effect in the following term​(
+Drexel Home
+). It’s advisable to meet with an advisor from the new major to discuss how your current coursework can align with the new program​","20% of students change majors within the first year: This statistic indicates that Drexel has a significant number of students who switch majors during their freshman year, demonstrating the university’s willingness to accommodate changes in academic goals.
+Core course requirements may change: When switching majors, students should be aware that their core course requirements will likely change. This suggests that Drexel’s curriculum is designed to accommodate different majors, and students will need to fulfill new requirements.
+Advisor involvement: The process of switching majors involves consulting with academic advisors, both from the current and desired majors. This emphasizes the importance of planning and coordination in making a successful transition.
+Timing: According to the information, any academic program change submitted after the first week of the current term will be effective for the following term. This allows students to plan ahead and make adjustments accordingly.
+College-specific considerations: Some colleges, such as engineering, may have more rigid curricula, with fewer opportunities to switch majors early on. However, this information is not explicitly stated, and students should consult with advisors to understand the specifics of their desired major.","Drexel University is making efforts to increase flexibility in its curriculum, especially with the upcoming transition to a semester-based system. Here's what you should know about switching majors after your first year:
+Increased Flexibility
+The university is moving towards a more flexible curriculum structure that will allow students greater choice in designing their academic paths.
+This includes the implementation of core competency requirements for all undergraduate students, which should provide more curricular alignment and flexibility across programs.",0.2182
+"How accessible are Drexel’s professors, especially in large departments like Computer Science or Engineering?","While professors in large departments often have full schedules, they are generally accessible during office hours and via email. A useful tip is to attend smaller events, such as department talks or research presentations, where professors tend to be more approachable.","Drexel University emphasizes smaller class sizes, which allows professors to become individually acquainted with their students. This smaller teacher-to-student ratio enhances accessibility, fostering opportunities for personalized academic advising and building professional connections. 
+
+
+For more details, you can explore the following links:
+
+
+
+Drexel University - School of Education
+
+Drexel University - Faculty Directory","At Drexel University, professors generally strive to be accessible to students, even in large departments like Computer Science and Engineering. Many faculty members maintain open lines of communication and encourage students to reach out for help outside of class, whether through email or scheduled office hours.
+
+Accessibility can vary, with some professors being more available and responsive than others. Many students report positive experiences, highlighting that professors often make an effort to provide additional support, such as extra resources or individual meetings, particularly for those facing challenges in large classes. Faculty members are also known to encourage student engagement and participation, which can foster a more approachable environment","A student in the math program with a minor in Computer Science reported that most professors are approachable and the Math Resource Center (MRC) has been helpful in staying on top of coursework. This suggests that professors in Computer Science-related fields are accessible and willing to provide support.
+The Reddit thread discussing the Computer Science Department’s recent faculty departures indicates that some students have had negative experiences with the department’s leadership, which may have contributed to the mass exodus of professors. However, this does not directly address professor accessibility, but rather administrative issues.
+The Electrical and Computer Engineering Faculty Research Guide provides a list of faculty research interests, which may indicate a level of transparency and openness within the department. This could suggest that professors in this department are accessible and willing to collaborate or advise students on research projects.","Contact information is readily available: The faculty directories list email addresses and office phone numbers for professors, making it easy for students to reach out.
+Office hours: While not explicitly mentioned, it's standard practice for professors to hold regular office hours where students can drop in or schedule appointments.
+Multiple communication channels: Professors provide various ways to contact them, including email, phone, and potentially through online platforms.
+Diverse faculty roles: Departments have a mix of research-focused professors and teaching-focused faculty (e.g. Teaching Professors, Associate Teaching Professors), which can increase overall faculty availability for students.
+Mentorship programs: The College of Computing & Informatics has a Peer Mentor program for undergraduates, which may help facilitate connections between students and faculty.
+Collaborative spaces: The move to new facilities at 3675 Market Street included ""collaborative learning spaces,"" which could promote more informal interactions between students and faculty.",0.2588
+"What’s the best way to get involved in research as an undergraduate, especially if you don’t have much prior experience?","The best way to get involved is by directly emailing professors whose research interests align with your own. Students often recommend attending faculty talks or department seminars and approaching professors afterward to express interest. Another strategy is to apply to Drexel’s STAR (Students Tackling Advanced Research) Scholars Program, which is designed for first- and second-year students to get hands-on research experience.","To get involved in undergraduate research at Drexel, especially with limited prior experience, you can:
+
+
+
+Start Early: Engage in research opportunities as soon as your freshman year.
+
+Find a Mentor: Seek guidance from faculty who can help clarify your academic and professional goals.
+
+Join Programs: Participate in programs like the STAR Scholars Program which offers mentorship and research opportunities during the summer after your freshman year.
+
+
+For more details, you can check these helpful links:
+
+
+
+Undergraduate Research & Enrichment Programs
+
+College of Arts and Sciences Research Opportunities","Getting involved in research as an undergraduate at Drexel, especially with limited prior experience, is entirely achievable with the right approach. Here are some strategies:
+
+Identify Your Interests: Start by determining the specific area of research you're interested in. Familiarize yourself with faculty members whose research aligns with your interests.
+
+Engage with Faculty: Actively reach out to professors whose work you admire. Prepare a concise email that includes your resume, a brief introduction of yourself, your academic standing, GPA, and a clear expression of your interest in their research. Don’t hesitate to ask if they have openings for undergraduate research assistants or if they could recommend other opportunities​(
+Drexel Home
+)​(
+Drexel Home
+).
+
+Utilize Campus Resources: Drexel offers several programs to support undergraduate research:
+
+The STAR Scholars Program allows students to undertake research projects during the summer after their freshman year.
+The Pennoni Honors College can connect you with mentors and provide support in finding research opportunities​(
+Drexel Home
+).","Explore Research Opportunities: Visit the Drexel University website and search for research opportunities in your desired field or department. You can also reach out to faculty members directly to inquire about potential projects.
+Apply to the STAR Scholars Program: The STAR (Summer Training and Research) program offers 3-month research experiences under the guidance of a faculty member. This program is a great way to gain research experience, regardless of prior experience. Apply early, as spots are competitive.
+Look into VIP Research: The VIP (Volunteer Internship Program) in Research is designed for students with little to no research experience. It’s an excellent opportunity to learn and contribute to a research project. No prior experience is required, and you’ll have the chance to develop new skills.","Drexel University offers several excellent opportunities for undergraduates to get involved in research, even if you don't have prior experience:
+STAR Scholars Program: This program is specifically designed for first-year students to engage in faculty-mentored research during the summer after their freshman year. It's a competitive program that provides hands-on research experience, a stipend, and free on-campus housing.
+Undergraduate Research & Enrichment Programs (UREP): UREP offers various opportunities, including:
+Undergraduate Research Mini-Grants of up to $2000 annually
+Travel grants of up to $500-$750 for presenting research at conferences
+The Aspire Scholars Program, which provides guidance and up to $750 in funding
+College of Arts and Sciences Undergraduate Research Support (ASURS) Program: This program offers $1,500 in funding over six months for students to work on research projects with faculty mentors or PhD candidates.",0.2692
