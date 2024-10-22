@@ -426,12 +426,14 @@ def is_valid_url(url: str) -> bool:
     is_social_media = any(platform in url for platform in ["reddit", "tiktok", "linkedin", "instagram", "facebook", "twitter", "youtube"])
     return is_http and not has_invalid_extension and not is_social_media
 
+# too slow, deprecating
 def fetch_content_from_urls(urls):
     content = ""
     if type(urls) == str:
         urls = [urls]
     for url in urls:
-        if is_valid_url(url):
+        if is_valid_url(url) and "drexel.edu" in url:
+            print(url)
             try:
                 response = requests.get(url)
                 if response.status_code == 200:
@@ -446,4 +448,4 @@ def duckduckgo_search(query):
     return DDGS().text(query, max_results=3, backend="lite")
 
 if __name__ == "__main__":
-    upload_minors_to_index(r'C:\Users\alexa\Desktop\dragongpt-backend\data_collection\tools\drexel_catalog\data\minors_data.json')
+    pass
