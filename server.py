@@ -38,14 +38,17 @@ def improve_rag(RAG, query):
 
     if check_answer.lower() != 'yes':
         urls = parse_urls_from_rag(RAG)
-        RAG += data_manager.fetch_content_from_urls(urls)
+        # RAG += data_manager.fetch_content_from_urls(urls)
         search_results = data_manager.duckduckgo_search(query + " at Drexel University 2024")
+        # print(search_results)
         for result in search_results:
+            # print("fetching info")
+            RAG += result["body"]
             moreinfo = data_manager.fetch_content_from_urls(result["href"])
             if result["href"] not in urls:
                 RAG += moreinfo + result["href"]
-                #print(result["href"])
-                #print(moreinfo)
+                # print(result["href"])
+                # print(moreinfo)
         if len(RAG) > 128000:
             RAG = RAG[:128000]
     return RAG
@@ -73,7 +76,6 @@ def query_llm():
 
         if not query:
             return jsonify({"detail": "Query is required"}), 400
-
         RAG = data_manager.query_from_index(query)
         RAG = improve_rag(RAG, query)
         system_prompt = open(os.path.join("prompts", "system.txt"), 'r').read()
