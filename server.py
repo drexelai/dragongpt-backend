@@ -19,7 +19,7 @@ app = Flask(__name__)
 # app.config['DEBUG'] = os.environ["DEBUG_FLASK"]
 
 from flask_cors import CORS
-CORS(app, origins=["http://localhost:3000", "https://drexelai.github.io"])
+CORS(app, origins=["http://localhost:3000", "https://drexelai.github.io"], supports_credentials=True)# Allowing for future credential usage
 
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 INSTRUMENTATION_KEY = os.environ.get("APPINSIGHTS_INSTRUMENTATIONKEY")
@@ -117,9 +117,10 @@ def query_llm():
                 for chunk in stream:
                     if chunk.choices[0].delta.content is not None:
                         content = chunk.choices[0].delta.content
-                        full_content += content
-                        #print(content)  # Print the content for debugging purposes
-                        yield content
+                        if content : #Error handling for missing data 
+                            full_content += content
+                            #print(content)  # Print the content for debugging purposes
+                            yield content
                 # print(f"Response to question \"{query}\" has been generated")
                 logger.info(f"Response generated for question '{query}': {full_content}")
 
