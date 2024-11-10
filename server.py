@@ -22,17 +22,18 @@ from flask_cors import CORS
 CORS(app, origins=["http://localhost:3000", "https://drexelai.github.io"])
 
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-INSTRUMENTATION_KEY = os.environ.get("APPINSIGHTS_INSTRUMENTATIONKEY")
+INSTRUMENTATION_CONNECTION_STRING = os.environ.get("APPINSIGHTS_CONNECTION_STRING")
 tracer = Tracer(
-    exporter=AzureExporter(connection_string=f"InstrumentationKey={INSTRUMENTATION_KEY}"),
+    exporter=AzureExporter(connection_string=INSTRUMENTATION_CONNECTION_STRING),
     sampler=ProbabilitySampler(1.0)
 )
 
 # Set up the logger to send logs to Application Insights
-handler = AzureLogHandler(connection_string=f"InstrumentationKey={INSTRUMENTATION_KEY}")
+handler = AzureLogHandler(connection_string=INSTRUMENTATION_CONNECTION_STRING)
 logger = logging.getLogger(__name__)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
+
 
 def check_rag_with_openai_api(RAG, query):
     check_prompt = f"Does the following context answer the query?\n\nContext: {RAG}\n\nQuery: {query}\n\nAnswer with 'yes' or 'no' in lowercase only please."
@@ -131,24 +132,16 @@ def query_llm():
 
 @app.route("/summarize-convo", methods=["POST"])
 def summarize_convo():
-
     firstMessage = request.get_json()["message"]
-
-    def generate2():
-        stream = client.chat.completions.create(
+    chatrename = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a message summarizer who summarizes a given message into 2-3 words"},
                 {"role": "user", "content": firstMessage + "\n\nSummarize this message into 2-3 words and just return the message"}
-            ],
-            stream=True
-        )
-        for chunk in stream:
-            if chunk.choices[0].delta.content is not None:
-                content = chunk.choices[0].delta.content
-                #print(content)  # Print the content for debugging purposes
-                yield content
-    return Response(generate2(), content_type="text/plain-text")
+            ]
+        ).choices[0].message.content
+
+    return {"messageSummary": chatrename}
 
 
 @app.route("/blackboard", methods=["POST"])
@@ -157,7 +150,7 @@ def query_blackboard():
     response2 = "Your assignments this week: ENTP 205 Ready, Set, Fail: Discussion board post on business idea due Friday 11:59PM. ENTP 325 Early Stage Venture Funding: Cap table assignment due Wednesday 11:59PM. MATH 121: Problem Set 4 pages 79-81 textbook due Thursday before class. Suggested Time Budgeting Plan: Monday (Today) – Focus: Start and finish Cap Table Assignment for ENTP 325. Time Required: 2-3 hours (including research and calculations). Goal: Complete most, if not all, of this assignment since it’s due soonest. Tuesday – Focus: Finish up the Cap Table Assignment if any parts remain. Time Required: 1 hour (if needed for final touch-ups). Begin: MATH 121 Problem Set 4 to avoid rushing before class on Thursday. Time Required: 1-2 hours. Goal: Get at least halfway through the problem set. Wednesday – Focus: Complete the remaining part of MATH 121 Problem Set 4. Time Required: 1-2 hours. Goal: Finish the problem set and review answers if time allows. Thursday – Focus: Write the Discussion Board Post for ENTP 205. Time Required: 1-2 hours for writing and revising. Goal: Complete the post in time for submission on Friday. This plan ensures you’re prioritizing based on due dates and spreading out your workload for a balanced approach."
 
 
-    def generate3():
+    def generateblackboard():
         stream = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
@@ -171,7 +164,7 @@ def query_blackboard():
                 content = chunk.choices[0].delta.content
                 #print(content)  # Print the content for debugging purposes
                 yield content
-    return Response(generate3(), content_type="text/plain-text")
+    return Response(generateblackboard(), content_type="text/plain-text")
 
 
 if __name__ == "__main__":
