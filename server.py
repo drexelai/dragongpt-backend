@@ -6,34 +6,18 @@ import sys
 sys.path.append('./')
 from data_collection import data_manager
 import ast
-from opencensus.ext.azure.trace_exporter import AzureExporter
-from opencensus.ext.azure.log_exporter import AzureLogHandler
-from opencensus.trace.samplers import ProbabilitySampler
-from opencensus.trace.tracer import Tracer
 import logging
 
 
 load_dotenv("keys.env")
 
 app = Flask(__name__)
-# app.config['DEBUG'] = os.environ["DEBUG_FLASK"]
+app.config['DEBUG'] = os.environ["DEBUG_FLASK"]
 
 from flask_cors import CORS
-CORS(app, origins=["http://localhost:3000", "https://drexelai.github.io"], supports_credentials=True)# Allowing for future credential usage
+CORS(app, origins=["http://localhost:3000", "https://drexelai.github.io"])
 
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-INSTRUMENTATION_CONNECTION_STRING = os.environ.get("APPINSIGHTS_CONNECTION_STRING")
-tracer = Tracer(
-    exporter=AzureExporter(connection_string=INSTRUMENTATION_CONNECTION_STRING),
-    sampler=ProbabilitySampler(1.0)
-)
-
-# Set up the logger to send logs to Application Insights
-handler = AzureLogHandler(connection_string=INSTRUMENTATION_CONNECTION_STRING)
-logger = logging.getLogger(__name__)
-logger.addHandler(handler)
-logger.setLevel(logging.INFO)
-
 
 def check_rag_with_openai_api(RAG, query):
     check_prompt = f"Does the following context answer the query?\n\nContext: {RAG}\n\nQuery: {query}\n\nAnswer with 'yes' or 'no' in lowercase only please."
@@ -85,51 +69,46 @@ def reformat_chat_data(chat_data):
 
 @app.route("/query", methods=["POST"])
 def query_llm():
-    with tracer.span(name="query_llm_span") as span:
-        try:
-            data = request.get_json()
-            query = data.get("query")
+    try:
+        data = request.get_json()
+        query = data.get("query")
 
-            logger.info(f"Received question: {query}")
-            span.add_annotation("Processing query")
+        priorConversation = data.get("priorConversation")
+        reformatted_chat = reformat_chat_data(priorConversation)
 
-            priorConversation = data.get("priorConversation")
-            reformatted_chat = reformat_chat_data(priorConversation)
+        if not query:
+            return jsonify({"detail": "Query is required"}), 400
 
-            if not query:
-                return jsonify({"detail": "Query is required"}), 400
+        RAG = data_manager.query_from_index(query)
+        RAG = improve_rag(RAG, query)
+        system_prompt = open(os.path.join("prompts", "system.txt"), 'r').read()
+        instructions = open(os.path.join("prompts", "instructions.txt"), 'r').read()
+        output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown but organize the code using level 2 headings and paragraphs. Feel free to use lists and other markdown features"
+        user_prompt = f'Use any information from the current conversation history where needed:\n{reformatted_chat}\n\n{RAG}\n\n {instructions} \n\n{query} + {output_format}'
+        def generate():
+            full_content = ""
+            stream = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                stream=True
+            )
+            for chunk in stream:
+                if chunk.choices[0].delta.content is not None:
+                    content = chunk.choices[0].delta.content
+                    if content : #Error handling for missing data
+                        full_content += content
+                        #print(content)  # Print the content for debugging purposes
+                        yield content
+            # print(f"Response to question \"{query}\" has been generated")
 
-            RAG = data_manager.query_from_index(query)
-            RAG = improve_rag(RAG, query)
-            system_prompt = open(os.path.join("prompts", "system.txt"), 'r').read()
-            instructions = open(os.path.join("prompts", "instructions.txt"), 'r').read()
-            output_format = "\nPlease answer only in a couple sentences and render the entire response in markdown but organize the code using level 2 headings and paragraphs. Feel free to use lists and other markdown features"
-            user_prompt = f'Use any information from the current conversation history where needed:\n{reformatted_chat}\n\n{RAG}\n\n {instructions} \n\n{query} + {output_format}'
-            def generate():
-                full_content = ""
-                stream = client.chat.completions.create(
-                    model="gpt-4o-mini",
-                    messages=[
-                        {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": user_prompt}
-                    ],
-                    stream=True
-                )
-                for chunk in stream:
-                    if chunk.choices[0].delta.content is not None:
-                        content = chunk.choices[0].delta.content
-                        if content : #Error handling for missing data 
-                            full_content += content
-                            #print(content)  # Print the content for debugging purposes
-                            yield content
-                # print(f"Response to question \"{query}\" has been generated")
-                logger.info(f"Response generated for question '{query}': {full_content}")
+        return Response(generate(), content_type="text/plain-text")
 
-            return Response(generate(), content_type="text/plain-text")
-
-        except Exception as e:
-            print(e)
-            return jsonify({"answer": str(e)}), 500
+    except Exception as e:
+        print(e)
+        return jsonify({"answer": str(e)}), 500
 
 @app.route("/summarize-convo", methods=["POST"])
 def summarize_convo():
