@@ -5,6 +5,7 @@ from tqdm import tqdm
 import os
 import time
 import json
+import csv
 from dotenv import load_dotenv
 from itertools import islice
 import unicodedata
@@ -15,10 +16,10 @@ from bs4 import BeautifulSoup
 # Load environment variables
 load_dotenv("keys.env") #not needed for deployment
 
-# Initialize Pinecone and embedding model
+# Globals
 pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
 spec = ServerlessSpec(cloud="aws", region="us-east-1")
-index_name = "dragongpt"
+index_name = "tms" #"dragongpt"
 index = pc.Index(index_name)
 
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -405,6 +406,88 @@ def upload_minors_to_index(filepath, batch_size=100, max_tokens_per_chunk=256):
     print("Here is what the index looks like:")
     print(index.describe_index_stats())
 
+
+def upload_tms_data_to_index(filepath, batch_size=200, max_tokens_per_chunk=256):
+    """
+    Upload Term Master Schedule (TMS) data to the Pinecone index named 'tms'.
+
+    Parameters:
+        filepath (str): Path to the CSV file containing the TMS data.
+        batch_size (int): Number of vectors to upload in each batch.
+        max_tokens_per_chunk (int): Maximum number of tokens per text chunk for vectorization.
+    """
+    # Open and parse the CSV file
+    with open(filepath, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        pinecone_data = []
+
+        for row in tqdm(reader):
+            # Extract relevant fields
+            subject_code = row['SubjectCode']
+            course_no = row[r'CourseNo\.']
+            instr_type = row['InstrType']
+            instr_method = row['InstrMethod']
+            section = row['Sec']
+            crn_url = row['CRN_URL']
+            crn = row['CRN']
+            course_title = row['CourseTitle']
+            days_time = row['Days_Time']
+            days_time1 = row.get('Days_Time1', '')
+            instructor = row['Instructor']
+
+            # Combine fields into a single text blob for vectorization
+            combined_text = (
+                f"Subject: {subject_code}, Course Number: {course_no}, Instruction Type: {instr_type}, "
+                f"Instruction Method: {instr_method}, Section: {section}, CRN: {crn}, "
+                f"Course Title: {course_title}, Days/Times: {days_time} {days_time1}, "
+                f"Instructor: {instructor}, CRN URL: {crn_url}"
+            )
+
+            # Normalize and chunk the text
+            text_chunks = chunk_text_if_needed(normalize_text(combined_text), max_tokens_per_chunk)
+
+            for chunk_index, text_chunk in enumerate(text_chunks):
+                vector = create_vector(text_chunk)
+                metadata = {
+                    'SubjectCode': subject_code,
+                    'CourseNo': course_no,
+                    'InstrType': instr_type,
+                    'InstrMethod': instr_method,
+                    'Sec': section,
+                    'CRN_URL': crn_url,
+                    'CRN': crn,
+                    'CourseTitle': course_title,
+                    'Days_Time': days_time,
+                    'Days_Time1': days_time1,
+                    'Instructor': instructor,
+                    'Text_Chunk': text_chunk,
+                    'Chunk_Index': chunk_index
+                }
+
+                # Create a unique vector ID
+                vector_id = f"{subject_code}_{course_no}_{section}_chunk_{chunk_index}"
+
+                pinecone_data.append({
+                    'id': vector_id,  # Use unique ID for each chunk
+                    'values': vector,
+                    'metadata': metadata
+                })
+
+    # Initialize the Pinecone index for TMS if not already existing
+    tms_index_name = "tms"
+    if tms_index_name not in pc.list_indexes():
+        make_index(tms_index_name)
+    tms_index = pc.Index(tms_index_name)
+
+    # Batch upload to Pinecone
+    for ids_vectors_chunk in chunks(pinecone_data, batch_size=batch_size):
+        tms_index.upsert(vectors=ids_vectors_chunk)
+
+    print("Added TMS data to index")
+    print("Here is what the index looks like:")
+    print(tms_index.describe_index_stats())
+
+
 ###########################
 # Functions for Server.py #
 ###########################
@@ -449,3 +532,4 @@ def duckduckgo_search(query):
 
 if __name__ == "__main__":
     pass
+
