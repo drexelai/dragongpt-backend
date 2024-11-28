@@ -19,7 +19,7 @@ load_dotenv("keys.env") #not needed for deployment
 # Globals
 pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
 spec = ServerlessSpec(cloud="aws", region="us-east-1")
-index_name = "tms" #"dragongpt"
+index_name = "dragongpt" #"tms"
 index = pc.Index(index_name)
 
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
