@@ -8,6 +8,7 @@ from model import llm
 
 
 def generate_example_messages():
+    
     examples = [
         (
             "I'm a freshman and would like to take CS 171, CI 102, CS 164, and ENGL 103 next term. I don't like classes on Fridays and prefer to take my classes later in the day",
@@ -55,6 +56,7 @@ def get_llm_output():
 
 
 def generate_query():
+    
     response=get_llm_output()
     subject_course_pairs = [
         (pair.subject, pair.course) for tms in response.people for pair in tms.subject_course_pairs
@@ -88,6 +90,7 @@ def generate_query():
 
 
 def get_data_from_tms_db():
+    
     query=generate_query()
     output_response = db.run(query)
     try:
@@ -100,6 +103,7 @@ def get_data_from_tms_db():
 
 
 def create_json_request():
+    
     output_response=get_data_from_tms_db()
     processed_data = []
     for item in output_response:
