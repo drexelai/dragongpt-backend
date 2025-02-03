@@ -22,7 +22,7 @@ df = pd.read_csv('data_collection/tms/winter-tms.csv')
 engine = create_engine("sqlite:///course_scheduler/winterTms.db")
 db = SQLDatabase(engine=engine)
 
-# df.to_sql("winterTms", engine, index=False)
+#df.to_sql("winterTms", engine, index=False)
 
 prompt = ChatPromptTemplate.from_messages(
     [
