@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import sys
 sys.path.append('./')
-from data_collection import data_manager
+from data_collection.tools import data_manager
 import ast
 import logging
 
