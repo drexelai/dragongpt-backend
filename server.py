@@ -40,7 +40,7 @@ def improve_rag(RAG, query):
     if check_answer.lower() != 'yes':
         urls = parse_urls_from_rag(RAG)
         # RAG += data_manager.fetch_content_from_urls(urls)
-        search_results = data_manager.duckduckgo_search(query + " at Drexel University 2024")
+        search_results = data_manager.duckduckgo_search(query + " at Drexel University 2025")
         # print(search_results)
         for result in search_results:
             # print("fetching info")
